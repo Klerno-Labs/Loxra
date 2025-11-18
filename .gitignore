@@ -1,0 +1,9 @@
+dist
+release
+build
+landing/dist
+landing/.vite
+*.log
+*.tmp
+.DS_Store
+node_modules

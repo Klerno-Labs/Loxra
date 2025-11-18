@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.13"
+  targetNamespace="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.13"
+  elementFormDefault="qualified">
+
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CstmrPmtStsRpt" type="tns:CstmrPmtStsRpt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CstmrPmtStsRpt">
+    <xs:sequence>
+      <xs:element name="GrpHdr" type="tns:GroupHeader"/>
+      <xs:element name="OrgnlGrpInfAndSts" type="tns:OriginalGroupInfo"/>
+      <xs:element name="TxInfAndSts" type="tns:TransactionInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupHeader">
+    <xs:sequence>
+      <xs:element name="MsgId" type="tns:Text35"/>
+      <xs:element name="CreDtTm" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OriginalGroupInfo">
+    <xs:sequence>
+      <xs:element name="OrgnlMsgId" type="tns:Text35"/>
+      <xs:element name="OrgnlMsgNmId" type="tns:Text35"/>
+      <xs:element name="GrpSts" type="tns:StatusCode" minOccurs="0"/>
+      <xs:element name="StsRsnInf" type="tns:StatusReason" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TransactionInfo">
+    <xs:sequence>
+      <xs:element name="OrgnlEndToEndId" type="tns:Text35"/>
+      <xs:element name="OrgnlTxId" type="tns:Text35" minOccurs="0"/>
+      <xs:element name="TxSts" type="tns:StatusCode"/>
+      <xs:element name="StsRsnInf" type="tns:StatusReason" minOccurs="0"/>
+      <xs:element name="AddtlTxInf" type="tns:Text140" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StatusReason">
+    <xs:sequence>
+      <xs:element name="Rsn" type="tns:ReasonCode" minOccurs="0"/>
+      <xs:element name="AddtlInf" type="tns:Text140" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="StatusCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACTC"/>
+      <xs:enumeration value="ACCP"/>
+      <xs:enumeration value="ACSC"/>
+      <xs:enumeration value="ACSP"/>
+      <xs:enumeration value="RJCT"/>
+      <xs:enumeration value="PDNG"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ReasonCode">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Text35">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Text140">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="140"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

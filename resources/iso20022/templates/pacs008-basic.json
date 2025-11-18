@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "id": "pacs008-basic",
+    "name": "FI credit transfer (pacs.008)",
+    "type": "pacs.008",
+    "description": "Inter-bank credit transfer with minimal data",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  "payload": {
+    "type": "pacs.008",
+    "payload": {
+      "messageId": "PACS-2024-0001",
+      "creationDateTime": "2024-01-01T12:00:00Z",
+      "instructedAgentBic": "BOFAUS3N",
+      "instructingAgentBic": "CHASUS33",
+      "settlementMethod": "COVE",
+      "transactions": [
+        {
+          "endToEndId": "E2E-0001",
+          "amount": 8000.75,
+          "currency": "USD",
+          "debtor": {
+            "name": "Originating Bank",
+            "bic": "CHASUS33",
+            "iban": "GB33BUKB20201555555555"
+          },
+          "creditor": {
+            "name": "Receiving Bank",
+            "bic": "BOFAUS3N",
+            "iban": "GB29NWBK60161331926819"
+          },
+          "creditorAccount": "GB29NWBK60161331926819",
+          "debtorAccount": "GB33BUKB20201555555555",
+          "chargesBearer": "SHAR",
+          "remittanceInformation": "Treasury settlement",
+          "requestedExecutionDate": "2024-01-02"
+        }
+      ]
+    }
+  }
+}

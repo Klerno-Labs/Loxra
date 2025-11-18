@@ -1,0 +1,42 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "dist/main",
+    "rootDir": "src",
+    "types": [
+      "node"
+    ],
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@iso/*": [
+        "src/iso/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@extensions/*": [
+        "src/extensions/*"
+      ]
+    }
+  },
+  "include": [
+    "src/main/**/*",
+    "src/shared/**/*",
+    "src/iso/**/*",
+    "src/core/**/*",
+    "src/extensions/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/renderer"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "id": "camt053-basic",
+    "name": "Statement (camt.053)",
+    "type": "camt.053",
+    "description": "Daily account statement with two entries",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  "payload": {
+    "type": "camt.053",
+    "payload": {
+      "messageId": "STMT-2024-01-01",
+      "creationDateTime": "2024-01-01T07:00:00Z",
+      "account": {
+        "iban": "FR1420041010050500013M02606",
+        "currency": "EUR",
+        "name": "Example Corporate EUR"
+      },
+      "balances": [
+        { "type": "OPBD", "amount": 150000.00, "currency": "EUR" },
+        { "type": "CLBD", "amount": 152350.25, "currency": "EUR" }
+      ],
+      "entries": [
+        {
+          "amount": 2500.25,
+          "currency": "EUR",
+          "creditDebit": "CRDT",
+          "bookingDate": "2024-01-01",
+          "valueDate": "2024-01-01",
+          "remittanceInformation": "Payment from Client A"
+        },
+        {
+          "amount": 150.0,
+          "currency": "EUR",
+          "creditDebit": "DBIT",
+          "bookingDate": "2024-01-01",
+          "valueDate": "2024-01-01",
+          "remittanceInformation": "Service fee"
+        }
+      ]
+    }
+  }
+}

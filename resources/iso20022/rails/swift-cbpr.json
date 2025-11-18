@@ -1,0 +1,17 @@
+﻿{
+  "id": "swift-cbpr",
+  "name": "SWIFT CBPR+",
+  "description": "Cross-border FI-to-FI",
+  "profiles": [
+    {
+      "id": "cbpr-credit",
+      "name": "CBPR Credit Transfer",
+      "description": "pacs.009 core",
+      "schemaVersion": "pacs.009.001.10",
+      "defaultMessageType": "pacs.009",
+      "rules": {
+        "requiredFields": ["debtorAccount", "creditorAccount", "currency", "amount"]
+      }
+    }
+  ]
+}

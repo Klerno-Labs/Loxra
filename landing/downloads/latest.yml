@@ -1,0 +1,8 @@
+version: 2.0.0
+files:
+  - url: ISO20022-Translator-Setup-2.0.0.exe
+    sha512: v0lC3LHhKJpH0+h0dRIzHv3nJgIQiDoti8/3e7/7Kv+M8ltkAHMEpguzKfbnmPXUoAyqr1c2sW6ylUoIwj+8sA==
+    size: 85156561
+path: ISO20022-Translator-Setup-2.0.0.exe
+sha512: v0lC3LHhKJpH0+h0dRIzHv3nJgIQiDoti8/3e7/7Kv+M8ltkAHMEpguzKfbnmPXUoAyqr1c2sW6ylUoIwj+8sA==
+releaseDate: '2025-11-18T02:08:50.724Z'

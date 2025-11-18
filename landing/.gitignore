@@ -1,0 +1,7 @@
+# Optionally exclude large installer files from git
+# Uncomment if you want to upload installers separately
+# downloads/*.exe
+# downloads/*.dmg
+
+# But always include the update manifest
+!downloads/latest.yml

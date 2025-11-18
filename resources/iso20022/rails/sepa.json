@@ -1,0 +1,30 @@
+﻿{
+  "id": "sepa",
+  "name": "SEPA Core",
+  "description": "Eurozone credit transfers (SEPA style)",
+  "profiles": [
+    {
+      "id": "sepa-credit",
+      "name": "SEPA Credit Transfer",
+      "description": "pain.001 SEPA profile",
+      "schemaVersion": "pain.001.001.11",
+      "defaultMessageType": "pain.001",
+      "rules": {
+        "requiredFields": ["debtorAccount", "creditorAccount", "currency", "amount"],
+        "allowedCurrencies": ["EUR"],
+        "country": "EU"
+      }
+    },
+    {
+      "id": "sepa-instant",
+      "name": "SEPA Instant",
+      "description": "pacs.008 instant-style",
+      "schemaVersion": "pacs.008.001.10",
+      "defaultMessageType": "pacs.008",
+      "rules": {
+        "requiredFields": ["debtorAccount", "creditorAccount", "currency", "amount"],
+        "allowedCurrencies": ["EUR"]
+      }
+    }
+  ]
+}

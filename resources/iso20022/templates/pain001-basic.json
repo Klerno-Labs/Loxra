@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "id": "pain001-basic",
+    "name": "Single payment (pain.001)",
+    "type": "pain.001",
+    "description": "One-off credit transfer with debtor/creditor sample data",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  "payload": {
+    "type": "pain.001",
+    "payload": {
+      "messageId": "SAMPLE-PMT-001",
+      "creationDateTime": "2024-01-01T12:00:00Z",
+      "initiatingParty": "Sample Initiator",
+      "batchBooking": true,
+      "serviceLevel": "SEPA",
+      "requestedExecutionDate": "2024-01-02",
+      "debtor": {
+        "name": "Example Debtor Ltd",
+        "bic": "DEUTDEFFXXX",
+        "iban": "DE75512108001245126199",
+        "addressLine": "Unter den Linden 5"
+      },
+      "debtorAccount": "DE75512108001245126199",
+      "debtorAgentBic": "DEUTDEFFXXX",
+      "transactions": [
+        {
+          "endToEndId": "E2E-REF-001",
+          "amount": 1250.5,
+          "currency": "EUR",
+          "debtor": {
+            "name": "Example Debtor Ltd",
+            "bic": "DEUTDEFFXXX",
+            "iban": "DE75512108001245126199"
+          },
+          "creditor": {
+            "name": "John Doe",
+            "bic": "COBADEFFXXX",
+            "iban": "DE44500105175407324931"
+          },
+          "creditorAccount": "DE44500105175407324931",
+          "remittanceInformation": "Invoice 2024-01"
+        }
+      ]
+    }
+  }
+}

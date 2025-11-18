@@ -1,0 +1,44 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "ignoreDeprecations": "5.0",
+    "allowImportingTsExtensions": false,
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@renderer/*": [
+        "src/renderer/*"
+      ],
+      "@iso/*": [
+        "src/iso/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@extensions/*": [
+        "src/extensions/*"
+      ]
+    },
+    "types": [
+      "vitest/globals",
+      "vite/client"
+    ]
+  },
+  "include": [
+    "src/renderer",
+    "src/shared",
+    "src/core",
+    "src/extensions",
+    "vite.config.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.main.json"
+    }
+  ]
+}

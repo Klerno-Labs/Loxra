@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "id": "pacs002-basic",
+    "name": "pacs.002 Basic Payment Status Report",
+    "description": "Payment Status Report template with accepted status",
+    "type": "pacs.002",
+    "createdAt": "2025-11-16T00:00:00Z",
+    "updatedAt": "2025-11-16T00:00:00Z"
+  },
+  "payload": {
+    "type": "pacs.002",
+    "payload": {
+      "messageId": "PACS002-STATUS-001",
+      "creationDateTime": "2025-11-16T12:00:00Z",
+      "originalMessageId": "PAIN001-REF-12345",
+      "originalMessageNameId": "pain.001.001.11",
+      "groupStatus": "ACTC",
+      "statusReasonCode": "G000",
+      "statusReasonInformation": "All transactions accepted for processing",
+      "transactions": [
+        {
+          "originalEndToEndId": "E2E-001",
+          "originalTransactionId": "TXN-001",
+          "transactionStatus": "ACTC",
+          "statusReasonCode": "G000",
+          "statusReasonInformation": "Transaction accepted"
+        },
+        {
+          "originalEndToEndId": "E2E-002",
+          "originalTransactionId": "TXN-002",
+          "transactionStatus": "ACTC",
+          "statusReasonCode": "G000",
+          "statusReasonInformation": "Transaction accepted"
+        }
+      ]
+    }
+  }
+}
