@@ -1,9 +1,10 @@
 {
-  "name": "iso-20022-desktop",
+  "name": "loxra",
   "version": "2.0.0",
-  "description": "ISO-20022 Translator - desktop Electron + React app with drag-drop, keyboard shortcuts, auto-save, and theme toggle",
+  "description": "Loxra — offline-first desktop app for composing, validating, and converting ISO-20022 messages. Bundled XSDs, legacy-format adapters (SWIFT MT / Fedwire / ACH), folder-bridge automation. Nothing leaves your device.",
   "main": "dist/main/main/main.js",
-  "author": "",
+  "author": "Pegrio LLC <chris@pegrio.com>",
+  "homepage": "https://loxra.app",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -k -n renderer,main \"npm:dev:renderer\" \"npm:dev:main\"",
@@ -68,8 +69,8 @@
     "vitest": "^2.1.5"
   },
   "build": {
-    "appId": "com.fintech.iso20022.desktop",
-    "productName": "ISO20022 Translator",
+    "appId": "com.pegrio.loxra",
+    "productName": "Loxra",
     "icon": "build/icon.png",
     "directories": {
       "buildResources": "build",
